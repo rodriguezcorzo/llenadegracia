@@ -1,0 +1,83 @@
+body, html {
+    height: 100%;
+    background-color: #eee;
+    margin: 0;
+}
+
+#layout {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 12% auto;
+    grid-template-areas:
+      "menu header"
+      "menu contenido";
+}
+
+.header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 8px; 
+    font-size: 20px;
+    background-color: #2696E9;
+    color: #eee;
+}
+
+.header h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.menu {
+    grid-area: menu;
+    background-color: #2696E9;
+    padding: 10px;
+}
+
+.menu img {
+    width: 120px;
+    margin: auto;
+    display: block;
+}
+
+.nav_bar {
+    margin-top: 20%;
+    list-style: none;
+    padding: 0;
+    color: #eee;
+}
+
+.nav_btn {
+    background-color: #eee;
+    border: none;
+    width: 100%;
+    padding: 4%;
+    border-radius: 6px;
+    color: #306690;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.6s;
+}
+
+.nav_btn:hover {
+    background-color: #306690;
+    color: #eee;
+}
+
+#contenedor {
+    padding-top: 4%;
+}
+
+.contenido {
+    grid-area: contenido;
+    background-color: #eee;
+    margin: 0;
+    padding: 0;
+}
