@@ -58,6 +58,7 @@ body, html {
     background-color: #eee;
     border: none;
     width: 100%;
+    height: 45px;
     padding: 4%;
     border-radius: 6px;
     color: #306690;
@@ -80,4 +81,85 @@ body, html {
     background-color: #eee;
     margin: 0;
     padding: 0;
+}
+.btn-cont {
+    padding: 20px;
+    margin: 0 3%;
+}
+
+.btn-agregar {
+    padding: 1em;
+    background-color: #2696E9;
+    border-radius: 6px;
+    color: #eee;
+    border : none;
+    transition: all 0.3s;
+    float: right;
+}
+
+.cont-tabla {
+    margin: 2% 0;
+}
+
+.mostrar-publicaciones, .mostrar-solicitudes {
+    width: 90%;
+    margin: 5%;
+    row-gap: 1em;
+}
+
+.mostrar-publicaciones td, .mostrar-solicitudes td {
+    padding: 10px;
+    border-bottom: 1px solid #333;
+}
+
+.celda-opciones {
+    display: flex;
+    font-size: 25px;
+    justify-content: space-around;
+}
+
+#opc-eliminar {
+    background-color: #ddd;
+    color: #a50000;
+    padding: 5px 8px;
+    border-radius: 4px;
+}
+
+#opc-editar {
+    background-color: #ddd;
+    color: #00004b;
+    padding: 5px 8px;
+    border-radius: 4px;
+}
+
+.cont-edit-publicacion {
+    width: 70%;
+    margin: 0 auto;
+}
+.cont-edit-publicacion h2 {
+    padding: 10px;
+    text-align: center;
+    color: #127848;
+}
+
+#form-n-publicacion {
+    padding: 0 15%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#form-n-publicacion input[type="text"], #form-n-publicacion textarea {
+    border-radius: 6px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+
+}
+
+#titulo-publicacion {
+    width: 30%;
+}
+
+#btn-publicar {
+    width: 20%;
 }
