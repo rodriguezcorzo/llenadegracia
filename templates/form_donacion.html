@@ -8,7 +8,25 @@
 </head>
 <body>
     <div class="cont-form-donacion">
+        <h2>Donación</h2>
+        <form action="#" method="POST">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
         
+            <label for="correo">Correo:</label>
+            <input type="email" id="correo" name="correo" required>
+        
+            <label for="celular">Celular:</label>
+            <input type="tel" id="celular" name="celular" required>
+        
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" required>
+        
+            <label for="descripcionDonacion">Descripción de la Donación:</label>
+            <textarea id="descripcionDonacion" name="descripcionDonacion" rows="4" required></textarea>
+        
+            <button type="submit">Enviar donación</button>
+        </form>
     </div>
 </body>
 </html>
