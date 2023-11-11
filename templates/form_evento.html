@@ -3,20 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/estilo_admin.css">
+    <link rel="stylesheet" href="../static/css/formularios.css">
     <title>Nuevo Evento</title>
 </head>
 <body>
-    <div class="cont-edit-publicacion">
-        <form action="" id="form-n-publicacion" method="POST" enctype="multipart/form-data">
-            <label for="ttulo">Titulo:</label>
-            <input type="text" name="titulo" id="titulo-publicacion">
-            <label for="contenido">Contenido:</label>
-            <textarea name="contenido" id="texto-publicacion" cols="30" rows="10"></textarea>
-            <label for="imagen">Imagenes:</label>
-            <div class="custom-file-input"></div>
-            <input type="file" name="imagen" id="img-publicacion">
-            <button class="btn-agregar" id="btn-publicar">Crear evento</button>
+    <div class="cont-form-evento">
+        <h2>NUEVO EVENTO</h2>
+        <form action="#" method="POST" enctype="multipart/form-data">
+            <label for="nombreEvento">Nombre del Evento:</label>
+            <input type="text" id="nombreEvento" name="nombreEvento" required>
+        
+            <label for="descripcionEvento">Descripción del Evento:</label>
+            <textarea id="descripcionEvento" name="descripcionEvento" rows="4" required></textarea>
+        
+            <label for="lugar">Lugar:</label>
+            <input type="text" id="lugar" name="lugar" required>
+        
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" name="fecha" required>
+        
+            <label for="imagenes">Imágenes:</label>
+            <input type="file" id="imagenes" name="imagenes[]" accept="image/*" multiple required>
+        
+            <button type="submit">Crear evento</button>
         </form>
     </div>
 </body>
