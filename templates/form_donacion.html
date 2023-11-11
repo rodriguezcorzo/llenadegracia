@@ -3,59 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario para Donación</title>
-    <script>
-        function mostrarCamposDonacion() {
-            var donacionCheckbox = document.getElementById("donacion");
-            var cantidadInput = document.getElementById("cantidad");
-            var metodoPagoSelect = document.getElementById("metodo_pago");
-
-            if (donacionCheckbox.checked) {
-                cantidadInput.style.display = "block";
-                metodoPagoSelect.style.display = "block";
-                camposDonacion.style.display = "block";
-            } else {
-                cantidadInput.style.display = "none";
-                metodoPagoSelect.style.display = "none";
-                camposDonacion.style.display = "none";
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="../static/css/formularios.css">
+    <title>Donación</title>
 </head>
 <body>
-    <h1>Formulario para Donación</h1>
-    <form action="/procesar_donacion" method="post">
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
-
-        <label for="direccion">Dirección:</label>
-        <input type="text" id="direccion" name="direccion" required>
-
-        <label for="email">Correo Electrónico:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="telefono">Número Celular:</label>
-        <input type="tel" id="telefono" name="telefono" required>
-
-        <label for="descripcion">Descripción de la donación:</label>
-        <textarea id="descripcion" name="descripcion" rows="4" required></textarea>
-
-        <label for="donacion">¿Desea donar dinero?</label>
-        <input type="checkbox" id="donacion" name="donacion" value="dinero" onchange="mostrarCamposDonacion()">
-
-        <div id="camposDonacion" style="display: none;">
-            <label for="cantidad">Cantidad a Donar:</label>
-            <input type="number" id="cantidad" name="cantidad" step="0.01" required>
-
-            <label for="metodo_pago">Método de Pago:</label>
-            <select id="metodo_pago" name="metodo_pago" required>
-                <option value="tarjeta">Tarjeta de Crédito</option>
-                <option value="paypal">PayPal</option>
-                <option value="transferencia">Transferencia Bancaria</option>
-            </select>
-        </div>
-
-        <button type="submit">Enviar Donación</button>
-    </form>
+    <div class="cont-form-donacion">
+        
+    </div>
 </body>
 </html>
