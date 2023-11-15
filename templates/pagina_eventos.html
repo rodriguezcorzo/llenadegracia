@@ -3,29 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/estilo_eventos.css">
     <title>Eventos</title>
 </head>
 <body>
     <div class="cont-evento">
+        <h2>EVENTOS</h2>
         <div class="galeria-evento">
-            <h2>Últimos eventos</h2>
+            <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="../static/img/ejemplo_evento_1.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../static/img/ejemplo_evento_2.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../static/img/ejemplo_evento_3.jpg" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+            </div>
         </div>
         <div class="descripcion-evento">
-            <h2>Titulo evento</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa corrupti id atque laborum nostrum molestiae a porro voluptate. Ducimus ipsum dolores velit dolor totam minus nobis reiciendis, soluta corporis sunt.</p>
-            <button>Ver más</button>
+            <h3>Titulo evento</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa corrupti id atque laborum nostrum molestiae a porro voluptate. Ducimus ipsum dolores velit dolor totam minus nobis reiciendis, soluta corporis sunt.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, aspernatur. A accusantium rerum doloribus dignissimos eaque velit repellat ipsa, unde dicta qui quasi enim quo! Laborum in nulla dicta excepturi.
+            </p>
+            <button class="primario-btn">Ver más</button>
         </div>
         <div class="proximos-eventos">
-            <div>
-                <h2>Evento</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab modi quas labore temporibus, possimus quod, sapiente totam, sint eum nobis nisi exercitationem impedit. Ducimus voluptatibus earum id veritatis, atque non.</p>
-                <button>Inscribirse</button>
+            <h2>PRÓXIMOS EVENTOS</h2>
+            <div class="items">
+                <div class="item-proximo-evento">
+                    <h2>Evento</h2>
+                    <span>22 de Diciembre de 2023</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab modi quas labore temporibus, possimus quod, sapiente totam, sint eum nobis nisi exercitationem impedit. Ducimus voluptatibus earum id veritatis, atque non.</p>
+                    <button class="secundario-btn">Inscribirse</button>
+                </div>
+                <div class="item-proximo-evento">
+                    <h2>Evento</h2>
+                    <span>22 de Diciembre de 2023</span>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab modi quas labore temporibus, possimus quod, sapiente totam, sint eum nobis nisi exercitationem impedit. Ducimus voluptatibus earum id veritatis, atque non.</p>
+                    <button class="secundario-btn">Inscribirse</button>
+                </div>
             </div>
         </div>
         <div class="eventos-anteriores">
+            <h2>EVENTOS ANTERIORES</h2>
             <div class="item-evento-anterior">
                 <h4>Titulo del evento</h4>
-                <span>Fecha del evento</span>
+                <span>15 de Noviembre de 2023</span>
+            </div>
+            <div class="item-evento-anterior">
+                <h4>Titulo del evento</h4>
+                <span>15 de Noviembre de 2023</span>
+            </div>
+            <div class="item-evento-anterior">
+                <h4>Titulo del evento</h4>
+                <span>15 de Noviembre de 2023</span>
+            </div>
+            <div class="item-evento-anterior">
+                <h4>Titulo del evento</h4>
+                <span>15 de Noviembre de 2023</span>
+            </div>
+            <div class="item-evento-anterior">
+                <h4>Titulo del evento</h4>
+                <span>15 de Noviembre de 2023</span>
+            </div>
+            <div class="item-evento-anterior">
+                <h4>Titulo del evento</h4>
+                <span>15 de Noviembre de 2023</span>
             </div>
         </div>
     </div>

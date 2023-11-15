@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color:#1680AC;
+}
+
+.cont-evento {
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    grid-template-areas:
+        "titulo titulo"
+        "galeria descripcion"
+        "proximos proximos"
+        "anteriores anteriores";
+}
+
+.galeria-evento {
+  grid-area: galeria;
+}
+
+.cont-evento h2 {
+    grid-area: titulo;
+    text-align: center;
+    color: #fff;
+    padding: 12px;
+}
+
+.descripcion-evento {
+    grid-area: descripcion;
+    background-color: #ffffff60;
+    padding: 18px;
+    color: #fff;
+}
+
+.descripcion-evento h3 {
+    font-size: 40px;
+}
+
+.descripcion-evento p {
+    min-height: 75%;
+    font-size: 20px;
+    margin-top: 5%;
+}
+
+.primario-btn {
+    width: 25%;
+    padding: 4px 6px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    color: #2696E9;
+    font-weight: 700;
+    float: right;
+}
+
+.secundario-btn {
+    padding: 4px 6px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    background-color: #2696E9;
+    color: #fff;
+    font-weight: 700;
+    float: right;
+}
+
+.proximos-eventos {
+    grid-area: proximos;
+    background-color: #fff;
+    padding: 2%;
+}
+
+.items {
+    display: flex;
+}
+
+.proximos-eventos h2 {
+    color: #2696E9;
+}
+
+.item-proximo-evento {
+    padding: 16px;
+    margin: 6px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    background-color: #eee;
+}
+
+.item-proximo-evento span {
+    color: #aaa;
+    margin: 6px 0;
+}
+
+.eventos-anteriores {
+    grid-area: anteriores;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "title title";
+    grid-gap: 10px;
+    padding: 2%;
+}
+
+.eventos-anteriores h2 {
+    grid-area: title;
+    margin: 0;
+}
+  
+.item-evento-anterior {
+  padding: 10px;
+  background-color: #eeeeeef1;
+  border-radius: 6px;
+}
+
+.item-evento-anterior h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.item-evento-anterior span {
+  font-size: 14px;
+  color: #555;
+}
+
