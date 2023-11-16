@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/formularios.css">
+    <link rel="stylesheet" href="{{ url_for ('static', filename='css/formularios.css') }}">
     <title>Nuevo Evento</title>
 </head>
 <body>
+    {% extends 'administrador.html' %}
+    {% block content%}
     <div class="cont-form-evento">
         <h2>NUEVO EVENTO</h2>
         <form action="#" method="POST" enctype="multipart/form-data">
@@ -28,5 +30,6 @@
             <button type="submit">Crear evento</button>
         </form>
     </div>
+    {% endblock %}
 </body>
 </html>
