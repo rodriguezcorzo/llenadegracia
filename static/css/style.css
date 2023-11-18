@@ -25,11 +25,15 @@ header{
 }
 
 header .brand{
-  color: #fff;
-  font-size: 1.5em;
-  font-weight: 700;
-  text-transform: uppercase;
-  text-decoration: none;
+  display: flex;
+  align-items: flex-start;
+}
+
+.logo-image {
+  max-width: 25%;
+  height: auto;
+  border-radius: 8%;
+  max-height: 50px;
 }
 
 header .navigation{

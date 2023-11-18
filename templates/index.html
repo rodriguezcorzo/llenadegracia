@@ -3,19 +3,22 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Llena de gracia</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/style.css') }}">
+    <title>Fundación llena de gracia</title>
+    <link rel="stylesheet" href="../static/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="shortcut icon" href="../static/img/logo.png" type="image/x-icon">
   </head>
   <body>
 
     <header>
-      <a href="#" class="brand">LOGO DEL TROYANO</a>
+      <a href="#" class="brand">
+        <img src="../static/img/logo.png" alt="Fundacion Llena de Gracia" class="logo-img">
+      </a>
       <div class="menu-btn"></div>
       <div class="navigation">
         <div class="navigation-items">
-          <a href="{{ url_for('index') }}">Inicio</a>
-          <a href="#">Publicaciones</a>
+          <a href="index.html">Inicio</a>
+          <a href="pagina_eventos.html">Publicaciones</a>
           <a href="#">Galeria</a>
           <a href="#">Contacto</a>
         </div>
@@ -23,28 +26,28 @@
     </header>
 
     <section class="home">
-      <video class="video-slide active" src="{{url_for('static', filename = 'videos/4.mp4')}}" autoplay muted loop></video>
-      <video class="video-slide" src="{{url_for('static', filename = 'videos/5.mp4')}}" autoplay muted loop></video>
-      <video class="video-slide" src="{{url_for('static', filename = 'videos/3.mp4')}}" autoplay muted loop></video>
-      <video class="video-slide" src="{{url_for('static', filename = 'videos/1.mp4')}}" autoplay muted loop></video>
-      <video class="video-slide" src="{{url_for('static', filename = 'videos/2.mp4')}}" autoplay muted loop></video>
+      <video class="video-slide active" src="../static/videos/1.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="../static/videos/2.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="../static/videos/3.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="../static/videos/4.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="../static/videos/5.mp4" autoplay muted loop></video>
       <div class="content active">
         <h1>LLENA DE<br><span>GRACIA</span></h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <a href="#">VIRUZ AQUI</a>
       </div>
       <div class="content">
-        <h1>TROYANO2<br><span>VIRUZ</span></h1>
+        <h1>LLENA DE<br><span>GRACIA</span></h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <a href="#">VIRUZ AQUI</a>
       </div>
       <div class="content">
-        <h1>TROYANO3<br><span>VIRUZ</span></h1>
+        <h1>LLENA DE<br><span>GRACIA</span></h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <a href="#">VIRUZ AQUI</a>
       </div>
       <div class="content">
-        <h1>TROYANO4<br><span>VIRUZ</span></h1>
+        <h1>LLENA DE<br><span>GRACIA</span></h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <a href="#">VIRUZ AQUI</a>
       </div>
@@ -54,7 +57,7 @@
         <a href="#">VIRUZ AQUI</a>
       </div>
       <div class="media-icons">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.facebook.com/fundacionllenadegracia?mibextid=PzaGJu"><i class="fab fa-facebook-f"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
         <a href="#"><i class="fab fa-twitter"></i></a>
       </div>
@@ -66,7 +69,6 @@
         <div class="nav-btn"></div>
       </div>
     </section>
-    {% block content %}{% endblock %}<
-    <script type="text/javascript" src="{{url_for('static', filename = 'js/slider.js')}}"></script>
+    <script type="text/javascript" src="../static/javascript/slider.js"></script>
   </body>
 </html>

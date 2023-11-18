@@ -26,5 +26,10 @@ def formulario_donacion():
 def eventos():
     return render_template('eventos.html')
 
-if __name__ == '__main__':
-    app.run(debug=True, port=3000)
+@app.route('/pagina-eventos')
+def pagina_eventos():
+    print("Se está ejecutando la función de la página de eventos")
+    return  render_template('pagina_eventos.html')
+
+if __name__ == "__main__":
+    app.run(debug=True)

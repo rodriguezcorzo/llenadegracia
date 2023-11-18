@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for ('static', filename='css/formularios.css') }}">
+    <link rel="stylesheet" href="../static/css/formularios.css">
     <title>Inscripción</title>
 </head>
 <body>
     <div class="cont-form-inscripcion">
         <h2>INSCRIPCIÓN</h2>
-        <form action="#" method="POST">
+        <form action="incripcionForm" method="POST" onsubmit="return validarYEnviar()">
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required>
         
@@ -28,5 +28,6 @@
             <button type="submit">Inscribirse</button>
         </form>
     </div>
+    <script src="../static/javascript/validar_inscripcion.js"></script>
 </body>
 </html>

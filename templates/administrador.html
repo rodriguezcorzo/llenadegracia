@@ -3,25 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for ('static', filename= 'css/estilo_admin.css') }}">
+    <link rel="stylesheet" href="../static/css/estilo_admin.css">
     <title>Administrador</title>
 </head>
 <body id="layout">
     <header class="header">
-        <h3>Administrador</h3>
+        <h3>Administrador</h3>  
     </header>
     <aside class="menu">
         <div>
-            <img src="{{ url_for ('static', filename='img/menu.png') }}" alt="" id="">
+            <img src="../static/img/menu.png" alt="" id="">
         </div>
         <nav class="nav_bar">
-            <button class="nav_btn" onclick="location.href='{{ url_for('eventos') }}'">Eventos</button>
+            <button class="nav_btn">Eventos</button>
         </nav>
     </aside>
     <main class="contenedor">
-    {% block content %}
         <div id="contenido"></div>
-    {% endblock %}
     </main>
 </body>
 </html>
