@@ -20,20 +20,20 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 200px;
+  padding: 15px 180px;
   transition: 0.5s ease;
 }
 
 header .brand{
   display: flex;
   align-items: flex-start;
+  width: 60%;
 }
 
 .logo-image {
-  max-width: 25%;
+  width: 20%;
   height: auto;
   border-radius: 8%;
-  max-height: 50px;
 }
 
 header .navigation{
