@@ -6,13 +6,13 @@ function validarYEnviar() {
     let celular = document.getElementById("celular").value;
     let profesion = document.getElementById("profesion").value;
 
-    // Validar los datos según tus criterios (puedes agregar más validaciones)
+    // Validar los datos
     if (nombre === "" || cedula === "" || correo === "" || celular === "") {
         alert("Por favor, complete todos los campos obligatorios.");
         return;
     }
 
-    // Crear un objeto JSON con los datos del formulario
+    // Crea un objeto JSON con los datos del formulario
     let formData = {
         nombre: nombre,
         cedula: cedula,
@@ -24,7 +24,5 @@ function validarYEnviar() {
     // Convertir el objeto a una cadena JSON
     let jsonData = JSON.stringify(formData);
 
-    // Enviar la cadena JSON al backend (puedes usar AJAX o Fetch para esto)
-    // Aquí solo se mostrará en la consola para demostración
-    alert(jsonData);
+    console.log(jsonData);
 }
