@@ -204,6 +204,7 @@ section{
 .video-slide.active{
   clip-path: circle(150% at 0 50%);
   transition: 2s ease;
+  z-index: 888;
   /*transition-property: clip-path;*/
 }
 

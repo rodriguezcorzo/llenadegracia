@@ -10,6 +10,17 @@ menuBtn.addEventListener("click", () => {
 const btns = document.querySelectorAll(".nav-btn");
 const slides = document.querySelectorAll(".video-slide");
 const contents = document.querySelectorAll(".content");
+
+let currentIndex = 0
+
+function changeContentAuto() {
+  currentIndex = (currentIndex + 1) % btns.length;
+
+  sliderNav(currentIndex)
+}
+
+setInterval(changeContentAuto, 5000);
+
 var sliderNav = function(manual){
   btns.forEach((btn) => {
     btn.classList.remove("active");
@@ -30,6 +41,8 @@ var sliderNav = function(manual){
 
 btns.forEach((btn, i) => {
   btn.addEventListener("click", () => {
+    clearInterval(autoChangeInterval);
+    currentIndex = i;
     sliderNav(i);
   });
 });
