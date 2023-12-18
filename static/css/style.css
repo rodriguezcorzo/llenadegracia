@@ -17,6 +17,7 @@ header{
   top: 0;
   left: 0;
   width: 100%;
+  background-color: rgba(104, 106, 7, 0.5);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -38,6 +39,7 @@ header .brand{
 
 header .navigation{
   position: relative;
+  width: 90%;
 }
 
 header .navigation .navigation-items a{
@@ -63,6 +65,13 @@ header .navigation .navigation-items a:before{
 
 header .navigation .navigation-items a:hover:before{
   width: 100%;
+}
+
+.login{
+  display: flex;
+  align-items: flex-end;
+  width: 30%;
+  margin-left: 50px;
 }
 
 section{
