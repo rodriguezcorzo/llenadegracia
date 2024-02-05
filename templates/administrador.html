@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/estilo_admin.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo_admin.css') }}">
     <title>Administrador</title>
 </head>
 <body id="layout">
@@ -12,10 +12,10 @@
     </header>
     <aside class="menu">
         <div>
-            <img src="../static/img/menu.png" alt="" id="">
+            <img src="{{ url_for('static', filename='img/menu.png') }}" alt="" id="">
         </div>
         <nav class="nav_bar">
-            <a href="../templates/eventos.html">
+            <a href="{{ url_for('eventos') }}">
                 <button class="nav_btn">Eventos</button>
             </a>
         </nav>

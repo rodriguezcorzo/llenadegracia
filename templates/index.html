@@ -4,32 +4,32 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fundación llena de gracia</title>
-    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-    <link rel="shortcut icon" href="../static/img/logo-sin-fondo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/logo-sin-fondo.png') }}" type="image/x-icon">
   </head>
   <body>
 
     <header>
-      <a href="../templates/index.html" class="brand">
-        <img src="../static/img/logo-sin-fondo.png" alt="Fundacion Llena de Gracia" class="logo-image">
+      <a href="{{ url_for('index') }}" class="brand">
+        <img src="{{ url_for('static', filename='img/logo-sin-fondo.png') }}" alt="Fundacion Llena de Gracia" class="logo-image">
       </a>
       <div class="menu-btn"></div>
       <div class="navigation">
         <div class="navigation-items">
-          <a href="index.html">Inicio</a>
-          <a href="pagina_eventos.html">Publicaciones</a>
-          <a href="../templates/form_donacion.html">Donar</a>
+          <a href="{{ url_for('index') }}">Inicio</a>
+          <a href="{{ url_for('pagina_eventos') }}">Publicaciones</a>
+          <a href="{{ url_for('form_donacion') }}">Donar</a>
           <a href="#">Contacto</a>
         </div>
       </div>
     </header>
 
     <section class="home">
-      <video class="video-slide active" src="../static/videos/1.mp4" autoplay muted loop></video>
-      <video class="video-slide" src="../static/videos/2.mp4" autoplay muted loop></video>
-      <video class="video-slide" src="../static/videos/3.mp4" autoplay muted loop></video>
-      <video class="video-slide" src="../static/videos/4.mp4" autoplay muted loop></video>
+      <video class="video-slide active" src="{{ url_for('static', filename='videos/1.mp4') }}" autoplay muted loop></video>
+      <video class="video-slide" src="{{ url_for('static', filename='videos/2.mp4') }}" autoplay muted loop></video>
+      <video class="video-slide" src="{{ url_for('static', filename='videos/3.mp4') }}" autoplay muted loop></video>
+      <video class="video-slide" src="{{ url_for('static', filename='videos/4.mp4') }}" autoplay muted loop></video>
       <!-- <video class="video-slide" src="../static/videos/5.mp4" autoplay muted loop></video> -->
       <div class="content active">
         <h1>LLENA DE<br><span>GRACIA</span></h1>
@@ -69,6 +69,6 @@
         <!-- <div class="nav-btn"></div> -->
       </div>
     </section>
-    <script type="text/javascript" src="../static/javascript/slider.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='javascript/form_nuevo_evento.js') }}"></script>
   </body>
 </html>

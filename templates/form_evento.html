@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/formularios.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/formularios.css') }}">
     <title>Nuevo Evento</title>
 </head>
 <body>
@@ -19,8 +19,8 @@
             <label for="lugar">Lugar:</label>
             <input type="text" id="lugar" name="lugar" required>
         
-            <!--<label for="fecha">Fecha:</label>
-            <input type="date" id="fecha" name="fecha" required>-->
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" name="fecha" required>
         
             <label for="imagenes">Imágenes:</label>
             <input type="file" id="imagenes" name="imagenes[]" accept="image/*" multiple required>
