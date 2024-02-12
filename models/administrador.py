@@ -1,6 +1,4 @@
-from flask_sqlalchemy import SQLAlchemy
-
-db = SQLAlchemy()
+from . import db
 
 class Administrador(db.Model):
     ID_admin = db.Column(db.BigInteger, primary_key=True)

@@ -1,6 +1,4 @@
-from flask_sqlalchemy import SQLAlchemy
-
-db = SQLAlchemy()
+from . import db
 
 class Participante(db.Model):
     ID_usuario = db.Column(db.BigInteger, primary_key=True)

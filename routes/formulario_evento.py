@@ -3,7 +3,7 @@ from models.evento import Evento, db
 
 formulario_evento_bp = Blueprint('formulario_evento_bp', __name__)
 
-@formulario_evento_bp.route('/crear-evento', methods=['GET', 'POST'])
+@formulario_evento_bp.route('/crear_evento', methods=['GET', 'POST'])
 def formulario_evento():
     if request.method == 'POST':
         titulo = request.form['nombreEvento']

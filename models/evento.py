@@ -1,6 +1,4 @@
-from flask_sqlalchemy import SQLAlchemy
-
-db = SQLAlchemy()
+from . import db
 
 class Evento(db.Model):
     ID_evento = db.Column(db.Integer, primary_key=True, autoincrement=True)

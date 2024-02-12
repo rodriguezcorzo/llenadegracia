@@ -1,5 +1,5 @@
 from flask import render_template, Blueprint, redirect, url_for, request
-from models import Administrador
+from models.administrador import Administrador
 
 login_administrador_bp = Blueprint('login_administrador_bp', __name__)
 
