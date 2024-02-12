@@ -3,21 +3,21 @@ from flask import Blueprint
 app_routes = Blueprint('app_routes', __name__)
 
 # Importa las rutas individuales
-from .index import index
-from .mostrar_eventos import mostrar_eventos
-from .formulario_donacion import formulario_donacion
-from .login_administrador import login_administrador
-from .historial_evento import historial_evento
-from .formulario_evento import formulario_evento
-from .formulario_inscripcion import formulario_inscripcion
-from .administrador import administrador
+from .index import index_bp
+from .mostrar_eventos import mostrar_eventos_bp
+from .formulario_donacion import formulario_donacion_bp
+from .login_administrador import login_administrador_bp
+from .historial_evento import historial_evento_bp
+from .formulario_evento import formulario_evento_bp
+from .formulario_inscripcion import formulario_inscripcion_bp
+from .administrador import administrador_bp
 
 # Registra las rutas en el Blueprint
-app_routes.register_blueprint(index)
-app_routes.register_blueprint(mostrar_eventos)
-app_routes.register_blueprint(formulario_donacion)
-app_routes.register_blueprint(login_administrador)
-app_routes.register_blueprint(historial_evento)
-app_routes.register_blueprint(formulario_evento)
-app_routes.register_blueprint(formulario_inscripcion)
-app_routes.register_blueprint(administrador)
+app_routes.register_blueprint(index_bp)
+app_routes.register_blueprint(mostrar_eventos_bp)
+app_routes.register_blueprint(formulario_donacion_bp)
+app_routes.register_blueprint(login_administrador_bp)
+app_routes.register_blueprint(historial_evento_bp)
+app_routes.register_blueprint(formulario_evento_bp)
+app_routes.register_blueprint(formulario_inscripcion_bp)
+app_routes.register_blueprint(administrador_bp)

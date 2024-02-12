@@ -11,15 +11,15 @@
   <body>
 
     <header>
-      <a href="{{ url_for('index') }}" class="brand">
+      <a href="{{ url_for('app_routes.index_bp.index') }}" class="brand">
         <img src="{{ url_for('static', filename='img/logo-sin-fondo.png') }}" alt="Fundacion Llena de Gracia" class="logo-image">
       </a>
       <div class="menu-btn"></div>
       <div class="navigation">
         <div class="navigation-items">
-          <a href="{{ url_for('index') }}">Inicio</a>
-          <a href="{{ url_for('pagina_eventos') }}">Publicaciones</a>
-          <a href="{{ url_for('form_donacion') }}">Donar</a>
+          <a href="{{ url_for('app_routes.index_bp.index') }}">Inicio</a>
+          <a href="{{ url_for('app_routes.monstrar_eventos_bp.mostrar_eventos') }}">Publicaciones</a>
+          <a href="{{ url_for('app_routes.formulario_donacion.formulario_donacion') }}">Donar</a>
           <a href="#">Contacto</a>
         </div>
       </div>
@@ -70,5 +70,6 @@
       </div>
     </section>
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/form_nuevo_evento.js') }}"></script>
+    <script src="{{ url_for('static', filename='javascript/slider.js')}}"></script>
   </body>
 </html>

@@ -1,6 +1,7 @@
-from flask import render_template
-from . import app_routes
+from flask import render_template, Blueprint
 
-@app_routes.route('/eventos')
+historial_evento_bp = Blueprint('historial_evento_bp', __name__)
+
+@historial_evento_bp.route('/historial-de-eventos')
 def historial_evento():
-    return render_template('eventos.html')
+    return render_template('historial_eventos.html')

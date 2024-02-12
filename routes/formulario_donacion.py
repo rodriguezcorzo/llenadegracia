@@ -1,6 +1,7 @@
-from flask import render_template
-from . import app_routes
+from flask import render_template, Blueprint
 
-@app_routes.route('/donacion')
+formulario_donacion_bp= Blueprint('formulario_donacion', __name__)
+
+@formulario_donacion_bp.route('/donacion')
 def formulario_donacion():
-    return render_template('form_donacion.html')
+    return render_template('formulario_donacion.html')

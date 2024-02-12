@@ -1,4 +1,4 @@
-function validarYEnviar() {
+function validarParticipante() {
     // Obtener los datos del formulario
     let nombre = document.getElementById("nombre").value;
     let cedula = document.getElementById("cedula").value;
@@ -24,5 +24,11 @@ function validarYEnviar() {
     // Convertir el objeto a una cadena JSON
     let jsonData = JSON.stringify(formData);
 
-    console.log(jsonData);
+    fetch('/crear_participante', {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: jsonData,
+    });
 }

@@ -9,7 +9,7 @@
 <body>
     <div class="cont-form-inscripcion">
         <h2>INSCRIPCIÓN</h2>
-        <form action="{{ url_for('incripcionForm') }}" method="POST" onsubmit="return validarYEnviar()">
+        <form action="{{ url_for('app_routes.Formulario_inscripcion_bp.crear_participante') }}" method="POST" onsubmit="return validarParticipante()">
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required>
         

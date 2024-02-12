@@ -1,6 +1,7 @@
-from flask import render_template, redirect, url_for, request
-from . import app_routes
+from flask import render_template, Blueprint, redirect, url_for, request
 
-@app_routes.route('/administrador')
+administrador_bp = Blueprint('administrador_bp', __name__)
+
+@administrador_bp.route('/administrador')
 def administrador():
-    return redirect(url_for('administrador'))
+    return render_template('administrador.html')

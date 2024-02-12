@@ -8,4 +8,4 @@ class Inscripcion(db.Model):
     ID_usuario = db.Column(db.BigInteger, db.ForeignKey('usuario.ID_usuario'))
     fecha_inscripcion = db.Column(db.Date)
     evento = db.relationship('Evento', backref=db.backref('inscripciones', lazy=True))
-    usuario = db.relationship('Usuario', backref=db.backref('inscripciones', lazy=True))
+    usuario = db.relationship('Participante', backref=db.backref('inscripciones', lazy=True))

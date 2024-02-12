@@ -9,7 +9,7 @@
 <body>
     <div class="cont-form-evento">
         <h2>NUEVO EVENTO</h2>
-        <form action="#" method="POST" enctype="multipart/form-data">
+        <form action="/crear-evento" method="POST" enctype="multipart/form-data">
             <label for="nombreEvento">Nombre del Evento:</label>
             <input type="text" id="nombreEvento" name="nombreEvento" required>
         
@@ -21,7 +21,10 @@
         
             <label for="fecha">Fecha:</label>
             <input type="date" id="fecha" name="fecha" required>
-        
+
+            <label for="costo">Costo:</label>
+            <input type="number" id="costo" name="costo">
+
             <label for="imagenes">Imágenes:</label>
             <input type="file" id="imagenes" name="imagenes[]" accept="image/*" multiple required>
         
