@@ -11,7 +11,7 @@ create table Administradores (
     Clave varchar(150) not null
 );
 
-create table Usuarios (
+create table Participantes (
 	ID_usuario bigint primary key not null,
     Nombre varchar(50) not null,
     Apellido varchar(50) not null,

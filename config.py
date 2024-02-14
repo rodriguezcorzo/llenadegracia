@@ -6,4 +6,5 @@ class Config:
     TESTING = True
 
     SQLALCHEMY_DATABASE_URI = 'mysql://root:root@localhost/llenadegracia'
+    
     SQLALCHEMY_TRACK_MODIFICATIONS = False #! Debe ser desactivada (FALSE)
