@@ -1,10 +1,12 @@
-class Config:
+from flask_sqlalchemy import SQLAlchemy
 
+class Config:
     SECRET_KEY = '6547c09aad56961ec53cfaa155084e86'
-    #! Deben ser desactivadas (FALSE)
     DEBUG = True
     TESTING = True
 
-    SQLALCHEMY_DATABASE_URI = 'mysql://root:root@localhost/llenadegracia'
-    
-    SQLALCHEMY_TRACK_MODIFICATIONS = False #! Debe ser desactivada (FALSE)
+    # Configuración de la base de datos MySQL
+    SQLALCHEMY_DATABASE_URI = 'mysql://root@localhost/llenadegracia'
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+
+db = SQLAlchemy()

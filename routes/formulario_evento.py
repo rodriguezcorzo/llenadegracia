@@ -1,5 +1,6 @@
 from flask import render_template, Blueprint, request, redirect, url_for
-from models.evento import Evento, db
+from config import db
+from models.evento import Evento
 
 formulario_evento_bp = Blueprint('formulario_evento_bp', __name__)
 

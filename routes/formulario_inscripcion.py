@@ -1,5 +1,6 @@
 from flask import render_template, Blueprint, request, redirect, url_for
-from models.participantes import Participante, db
+from config import db
+from models.usuario import Persona
 
 formulario_inscripcion_bp = Blueprint('Formulario_inscripcion_bp', __name__)
 
@@ -15,7 +16,7 @@ def crear_participante():
     celular = request.form['celular']
     profesion = request.form['profesion']
 
-    nuevo_participante = Participante(
+    nuevo_participante = Persona(
         Nombre=nombre,
         Apellido=apellido,
         Correo=correo,

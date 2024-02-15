@@ -1,11 +1,15 @@
-from . import db
+from sqlalchemy import Column, Integer, BigInteger, Text, String, DateTime, LargeBinary, ForeignKey
+from sqlalchemy.orm import relationship
+from .usuario import Usuario
+from . import Base
 
-class Evento(db.Model):
-    ID_evento = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    Titulo = db.Column(db.String(50), nullable=False)
-    Descripcion = db.Column(db.String(500), nullable=False)
-    Fecha = db.Column(db.Date, nullable=False)
-    Imagen = db.Column(db.LargeBinary)
-    Costo = db.Column(db.Integer)
-    ID_admin = db.Column(db.BigInteger, db.ForeignKey('administrador.ID_admin'))
-    administrador = db.relationship('Administrador', backref=db.backref('eventos', lazy=True))
+class Evento(Base):
+    __tablename__ = 'eventos'
+
+    id_evento = Column(Integer, primary_key=True, autoincrement=True)
+    titulo = Column(String(50), nullable=False)
+    descripcion = Column(Text(500), nullable=False)
+    fecha = Column(DateTime)
+    imagen = Column(LargeBinary)
+    id_usuario = Column(BigInteger, ForeignKey('Usuarios.id_usuario'))
+    usuario = relationship("Usuarios")

@@ -1,5 +1,6 @@
 from flask import render_template, Blueprint, redirect, url_for, request
-from models.administrador import Administrador
+from models.usuario import Usuario
+from config import db
 
 login_administrador_bp = Blueprint('login_administrador_bp', __name__)
 
@@ -9,7 +10,7 @@ def login_administrador():
         ID_admin = request.form['ID_admin']
         password = request.form['password']
 
-        administrador = Administrador.query.filter_by(ID_admin=ID_admin).first()
+        administrador = db.session.query(Usuario).filter_by(id_usuario=ID_admin).first()
 
         if administrador and administrador.check_password(password):
             return redirect(url_for('ruta_de_administrador'))
