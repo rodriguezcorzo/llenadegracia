@@ -9,5 +9,5 @@ class Donacion(Base):
     id_donacion = Column(Integer, primary_key=True, autoincrement=True)
     descripcion = Column(Text(500), nullable=False)
     fecha = Column(DateTime)
-    id_persona = Column(Integer, ForeignKey('Personas.id_persona'))
-    persona = relationship("Personas")
+    id_persona = Column(Integer, ForeignKey('personas.id_persona'))
+    persona = relationship("Persona")

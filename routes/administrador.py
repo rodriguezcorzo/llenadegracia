@@ -1,4 +1,4 @@
-from flask import render_template, Blueprint, redirect, url_for, request
+from flask import render_template, Blueprint
 
 administrador_bp = Blueprint('administrador_bp', __name__)
 

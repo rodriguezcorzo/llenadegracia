@@ -16,11 +16,11 @@ def formulario_evento():
         # id_admin = request.form['id_admin']
 
         nuevo_evento = Evento(
-            Titulo=titulo,
-            Descripcion=descripcion,
-            Fecha=fecha,
-            Imagen=imagenes,
-            Costo=costo,
+            titulo=titulo,
+            descripcion=descripcion,
+            fecha=fecha,
+            imagen=imagenes,
+            costo=costo,
             #*Se obtiene atraves de la sesions
             #ID_admin=id_admin
         )

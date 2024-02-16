@@ -11,5 +11,6 @@ class Evento(Base):
     descripcion = Column(Text(500), nullable=False)
     fecha = Column(DateTime)
     imagen = Column(LargeBinary)
-    id_usuario = Column(BigInteger, ForeignKey('Usuarios.id_usuario'))
-    usuario = relationship("Usuarios")
+    costo = Column(Integer)
+    id_usuario = Column(BigInteger, ForeignKey('usuarios.id_usuario'))
+    usuario = relationship("Usuario")

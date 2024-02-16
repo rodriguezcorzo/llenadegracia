@@ -8,7 +8,7 @@ class Inscripcion(Base):
 
     id_inscripcion = Column(Integer, primary_key=True, autoincrement=True)
     fecha = Column(DateTime)
-    id_evento = Column(Integer, ForeignKey('Eventos.id_evento'))
-    id_persona = Column(Integer, ForeignKey('Personas.id_persona'))
-    evento = relationship("Eventos")
-    persona = relationship("Personas")
+    id_evento = Column(Integer, ForeignKey('eventos.id_evento'))
+    id_persona = Column(Integer, ForeignKey('personas.id_persona'))
+    evento = relationship("Evento")
+    persona = relationship("Persona")

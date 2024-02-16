@@ -4,6 +4,7 @@ function validarLogin() {
 
     if (idAdmin === "" || password === ""){
         alert("Por favor, complete todos los campos.")
+        return;
     }
 
     let formData = {
@@ -12,27 +13,30 @@ function validarLogin() {
     }
 
     enviarFormulario(formData);
+}
 
-    function enviarFormulario(formData) {
-        fetch("{{ url_for('app_routes.login_administrador_bp.login_administrador') }}", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(formData)
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error("Error al iniciar sesión.");
-            }
-            return response.json();
-        })
-        .then(data => {
-            // Manejar la respuesta del servidor si es necesario
-            console.log(data);
-        })
-        .catch(error => {
-            console.error("Error:", error);
-        });
-    }
+function enviarFormulario(formData) {
+
+    let baseUrl = document.querySelector("meta[name='base-url']").getAttribute("content");
+
+    fetch(baseUrl, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Error al iniciar sesión.");
+        }
+        return response.json();
+    })
+    .then(data => {
+        // Manejar la respuesta del servidor si es necesario
+        console.log(data);
+    })
+    .catch(error => {
+        console.error("Error:", error);
+    });
 }
