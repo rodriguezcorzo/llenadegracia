@@ -17,9 +17,7 @@ function validarLogin() {
 
 function enviarFormulario(formData) {
 
-    let baseUrl = document.querySelector("meta[name='base-url']").getAttribute("content");
-
-    fetch(baseUrl, {
+    fetch('/inicio_de_sesion', {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -33,9 +31,12 @@ function enviarFormulario(formData) {
         return response.json();
     })
     .then(data => {
-        // Manejar la respuesta del servidor si es necesario
-        console.log(data);
-    })
+        if (!data.ok) {
+         alert(data.error);
+         return;
+      }
+      window.location.href = data.redirect_url
+      })
     .catch(error => {
         console.error("Error:", error);
     });

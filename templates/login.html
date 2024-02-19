@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +7,7 @@
     <title>Iniciar Sesión</title>
 </head>
 <body>
-    <form class="form_main" action="{{ url_for('app_routes.login_administrador_bp.login_administrador') }}" method="post">
+    <form class="form_main">
         <p class="heading">Iniciar Sesión</p>
         <div class="inputContainer">
             <svg viewBox="0 0 16 16" fill="#2e2e2e" height="16" width="16" xmlns="http://www.w3.org/2000/svg" class="inputIcon">
@@ -24,7 +24,7 @@
     </div>
                   
                
-    <button type="submit" id="button">Ingresar</button>
+    <button onclick="validarLogin()">Iniciar sesión</button>
     </form>
     <script src="{{ url_for('static', filename='javascript/validar_login.js') }}"></script>
 </body>
