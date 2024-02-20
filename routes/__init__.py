@@ -11,6 +11,7 @@ from .historial_evento import historial_evento_bp
 from .formulario_evento import formulario_evento_bp
 from .formulario_inscripcion import formulario_inscripcion_bp
 from .administrador import administrador_bp
+from .solicitud_donacion import solicitud_donacion_bp
 
 # Registra las rutas en el Blueprint
 app_routes.register_blueprint(index_bp)
@@ -21,3 +22,4 @@ app_routes.register_blueprint(historial_evento_bp)
 app_routes.register_blueprint(formulario_evento_bp)
 app_routes.register_blueprint(formulario_inscripcion_bp)
 app_routes.register_blueprint(administrador_bp)
+app_routes.register_blueprint(solicitud_donacion_bp)
