@@ -1,6 +1,7 @@
 from . import Base, Column, Integer, BigInteger, String
+from config import db
 
-class Persona(Base):
+class Persona(db.Model):
     __tablename__ = 'personas'
 
     id_persona = Column(Integer, primary_key=True, autoincrement=True)
