@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
+{% extends "index.html" %}
+{% block contenido_eventos %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -89,4 +91,5 @@
     </div>
     <script src="{{ url_for('static', filename='javascript/form_inscripcion.js') }}"></script>
 </body>
+{% endblock %} 
 </html>

@@ -69,6 +69,9 @@
         <!-- <div class="nav-btn"></div> -->
       </div>
     </section>
+    <div class="content-event">
+      {% block contenido_eventos %}{% endblock %}
+    </div>
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/form_nuevo_evento.js') }}"></script>
     <script src="{{ url_for('static', filename='javascript/slider.js')}}"></script>
   </body>

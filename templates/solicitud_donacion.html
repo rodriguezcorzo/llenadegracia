@@ -6,29 +6,28 @@
     <title>Document</title>
 </head>
 <body>
-    <body>
-        <h2>Donaciones</h2>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>Persona</th>
-                    <th>Dirección</th>
-                    <th>Descripción</th>
-                    <th>Celular</th>
-                    <th>Fecha</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for donacion in datos_donaciones %}
-                <tr>
-                    <td>{{ donacion[2] }} {{ donacion[3] }}</td>
-                    <td>{{ donacion[4] }}</td>
-                    <td>{{ donacion[0] }}</td>
-                    <td>{{ donacion[5] }}</td>
-                    <td>{{ donacion[1] }}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+    <h2>Donaciones</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Persona</th>
+                <th>Dirección</th>
+                <th>Descripción</th>
+                <th>Celular</th>
+                <th>Fecha</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for donacion in datos_donaciones %}
+            <tr>
+                <td>{{ donacion[2] }} {{ donacion[3] }}</td>
+                <td>{{ donacion[4] }}</td>
+                <td>{{ donacion[0] }}</td>
+                <td>{{ donacion[5] }}</td>
+                <td>{{ donacion[1] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </body>
 </html>
