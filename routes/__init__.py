@@ -1,4 +1,5 @@
 from flask import Blueprint
+from base64 import b64encode
 
 app_routes = Blueprint('app_routes', __name__)
 
@@ -23,3 +24,7 @@ app_routes.register_blueprint(formulario_evento_bp)
 app_routes.register_blueprint(formulario_inscripcion_bp)
 app_routes.register_blueprint(administrador_bp)
 app_routes.register_blueprint(solicitud_donacion_bp)
+
+@app_routes.context_processor
+def utility_processor():
+    return dict(b64encode=b64encode)
