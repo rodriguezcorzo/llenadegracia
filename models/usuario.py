@@ -1,7 +1,6 @@
 from . import Base, Column, Integer, BigInteger, String, ForeignKey
 from sqlalchemy.orm import relationship
 from config import db
-from werkzeug.security import check_password_hash
 from .persona import Persona
 
 class Usuario(Base):
