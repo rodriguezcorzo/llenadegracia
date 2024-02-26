@@ -7,6 +7,8 @@
     <title>Nuevo Evento</title>
 </head>
 <body>
+    {% extends "administrador.html" %}
+    {% block contenido%}
     <div class="cont-form-evento">
         <h2>NUEVO EVENTO</h2>
         <form action="/crear_evento" method="POST" enctype="multipart/form-data">
@@ -31,5 +33,6 @@
             <button type="submit">Crear evento</button>
         </form>
     </div>
+    {% endblock %}
 </body>
 </html>

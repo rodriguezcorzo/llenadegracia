@@ -42,17 +42,3 @@ def login_administrador():
         else:
             error = 'Por favor, proporciona el nombre de usuario y la contraseña.'
     return renderizar_inicio_sesion(error)
-
-@login_administrador_bp.route('/administrador')
-def administrador():
-    if 'id_usuario' in session:
-        session_db = establecer_conexion()
-        usuario = session_db.query(Usuario).get(session['id_usuario'])
-        return render_template('administrador.html', usuario=usuario)
-    else:
-        return redirect(url_for('login_administrador_bp.login_administrador'))
-
-@login_administrador_bp.route('/logout')
-def logout():
-    session.pop('id_usuario', None)
-    return redirect(url_for('login_administrador_bp.login_administrador'))

@@ -3,7 +3,7 @@ create database llenadegracia;
 use llenadegracia;
 
 create table Personas(
-	id_persona int primary key,
+	id_persona int primary key auto_increment,
     nombre text(30) not null,
     apellido text(30) not null,
     cedula bigint,
@@ -35,6 +35,8 @@ create table Inscripciones(
     fecha datetime,
     id_evento int,
     id_usuario bigint,
+    id_persona int,
+    constraint Inscripciones_personas foreign key(id_persona) references Personas (id_persona),
     constraint Inscripciones_eventos foreign key (id_evento) references Eventos (id_evento),
     constraint Inscripciones_usuarios foreign key (id_usuario) references Usuarios (id_usuario)
 );

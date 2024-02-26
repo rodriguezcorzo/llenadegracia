@@ -24,10 +24,13 @@
             <a href="{{ url_for('app_routes.solicitud_donacion_bp.solicitud_donancion') }}">
                 <button class="nav_btn">Donaciones</button>
             </a>
+            <a href="{{ url_for('app_routes.solicitud_incripcion_bp.solicitud_inscripion') }}">
+                <button class="nav_btn">Inscripciones</button>
+            </a>
         </nav>
     </aside>
     <main class="contenedor">
-        <div id="contenido"></div>
+        {% block contenido %}{% endblock %}
     </main>
 </body>
 </html>

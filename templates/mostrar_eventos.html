@@ -18,34 +18,23 @@
                 <div class="carousel-inner">
                 {% for evento in eventos %}
                 <div class="carousel-item {% if loop.first %} active {% endif %}">
-                    <img src="{{ url_for('static', filename='img/ejemplo_evento_1.jpg') }}" class="d-block w-100" alt="...">
+                    <img src="data:image/png;base64,{{ evento.imagen_codificada }}" alt="Imagen del evento">
 
                 </div>
                 {% endfor %}
-                <div class="carousel-item">
-                    <img src="{{ url_for('static', filename='img/ejemplo_evento_2.jpg') }}" class="d-block w-100" alt="...">
                 </div>
-                <div class="carousel-item">
-                    <img src="{{ url_for('static', filename='img/ejemplo_evento_3.jpg') }}" class="d-block w-100" alt="...">
-                </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-                </button>
             </div>
         </div>
+        
         {% for evento in eventos %}
+        {% if loop.first %}
         <div class="descripcion-evento">
             <h3>{{ evento.titulo }}</h3>
             <p>{{ evento.descripcion }}</p>
-            <img src="data:image/jpeg;base64,{{ b64encode(evento.imagen).decode('utf-8') }}" alt="Imagen de evento">
+            <img src="data:image/jpeg;base64,{{ evento.imagen_codificada }}" alt="Imagen de evento">
             <button class="primario-btn">Ver más</button>
         </div>
+        {% endif %}
         {% endfor %}
         <div class="proximos-eventos">
             <h2>PRÓXIMOS EVENTOS</h2>
@@ -55,7 +44,9 @@
                     <h2>{{ proximo_evento.titulo }}</h2>
                     <span>{{ proximo_evento.fecha }}</span>
                     <p>{{ proximo_evento.descripcion }}</p>
-                    <button class="secundario-btn">Inscribirse</button>
+                    <a href="{{ url_for('app_routes.Formulario_inscripcion_bp.formulario_inscripcion', id_evento=proximo_evento[0]) }}">
+                        <button class="secundario-btn">Inscribirse</button>
+                    </a>
                 </div>
                 {% endfor %}
                 {% if not hay_eventos %}

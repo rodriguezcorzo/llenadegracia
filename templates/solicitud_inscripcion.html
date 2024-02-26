@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+{% extends "administrador.html" %}
+{% block contenido %}
+<!-- <h2>Eventos</h2> -->
+{% for evento, participantes in eventos_con_participantes %}
+<div style="margin-bottom: 20px;">
+    <h2>Eventos</h2>
+    <h3>{{ evento.titulo }} - {{ evento.fecha }}</h3>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Cédula</th>
+                <th>Celular</th>
+                <th>Profesión</th>
+                <!-- Puedes agregar más columnas según los detalles que quieras mostrar -->
+            </tr>
+        </thead>
+        <tbody>
+            <h2>Participantes</h2>
+            {% for participante in participantes %}
+            <tr>
+                <td>{{ participante.nombre }}</td>
+                <td>{{ participante.apellido }}</td>
+                <td>{{ participante.cedula }}</td>
+                <td>{{ participante.celular }}</td>
+                <td>{{ participante.profesion }}</td>
+                <!-- Asegúrate de ajustar las propiedades según tu lógica de datos -->
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endfor %}
+{% endblock %}
+</body>
+</html>
