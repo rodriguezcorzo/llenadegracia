@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% extends "index.html" %}
+    {% block contenido_publicaciones %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicaciones</title>
+    <link rel="stylesheet" href="../static/css/estilo_publicaciones.css">
+</head>
+<body>
+    <h2 class="titulo-publicacion">Publicaciones de eventos</h2>
+    <div id="publicaciones-container">
+        {% for evento in eventos %}
+        <div class="evento">
+            <h2>{{ evento.titulo }}</h2>
+            <p>{{ evento.descripcion }}</p>
+            <p>Fecha: {{ evento.fecha }}</p>
+            <!-- Puedes incluir la imagen si la tienes almacenada en la base de datos -->
+            <img src="data:image/png;base64,{{ evento.imagen }}" alt="Imagen del evento">
+            <!-- <p>Organizado por: {{ evento.usuario}}</p> -->
+        </div>
+        {% endfor %}
+    </div>
+    {% endblock %}
+</body>
+</html>

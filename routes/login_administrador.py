@@ -1,44 +1,37 @@
-from flask import Blueprint, url_for, request, redirect, render_template, flash, session, make_response
+from flask import Blueprint, render_template, request, redirect, url_for, session, flash
 from werkzeug.security import check_password_hash
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 from models import Usuario
-
-# Función para establecer la conexión con la base de datos
-def establecer_conexion():
-    engine = create_engine('mysql://root@localhost/llenadegracia')
-    Session = sessionmaker(bind=engine)
-    return Session()
-
-# Función para renderizar la página de inicio de sesión
-def renderizar_inicio_sesion(error=None):
-    # Creamos una respuesta que deshabilita la caché
-    response = make_response(render_template('login.html', error=error))
-    response.headers['Cache-Control'] = 'no-cache, no-store, must-revalidate'  # Deshabilita la caché en el navegador
-    response.headers['Pragma'] = 'no-cache'  # Para versiones anteriores de HTTP
-    response.headers['Expires'] = '0'  # Para versiones anteriores de HTTP
-    return response
+from config import db
+from sqlalchemy import text
 
 login_administrador_bp = Blueprint('login_administrador_bp', __name__)
 
 @login_administrador_bp.route('/inicio_de_sesion', methods=['GET', 'POST'])
 def login_administrador():
-    error = None
     if request.method == 'POST':
-        # Verificar si se han proporcionado credenciales
-        if 'ID_admin' in request.form and 'password' in request.form:
-            username = request.form['ID_admin']
-            password = request.form['password']
-            session_db = establecer_conexion()
-            usuario = session_db.query(Usuario).filter_by(clave=username).first()
-            if usuario:
-                if check_password_hash(usuario.clave, password):
-                    session['id_usuario'] = usuario.id_usuario
-                    return redirect(url_for('administrador'))
-                else:
-                    error = 'Contraseña incorrecta.'
+        user = request.form['user']
+        password = request.form['pass']
+
+        print(user, password)
+        
+        # Consulta SQL para buscar al usuario por ID de usuario
+        query = text(f"SELECT * FROM usuarios WHERE id_usuario = '{user}'")
+        usuario = db.session.execute(query).fetchone()
+        print(usuario)
+        
+        if usuario:
+            # Verificar la contraseña
+            if check_password_hash(usuario.clave, password):
+                # Iniciar sesión
+                session['user_id'] = usuario.id_usuario
+                flash('¡Inicio de sesión exitoso!', 'success')
+                print(session)
+                return redirect(url_for('administrador_bp.administrador'))
             else:
-                error = 'Usuario no encontrado.'
+                flash('¡Contraseña incorrecta!', 'error')
         else:
-            error = 'Por favor, proporciona el nombre de usuario y la contraseña.'
-    return renderizar_inicio_sesion(error)
+            flash('¡Usuario no encontrado!', 'error')
+    
+    return render_template('login.html')

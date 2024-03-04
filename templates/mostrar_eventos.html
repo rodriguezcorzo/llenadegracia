@@ -57,9 +57,21 @@
         </div>
         <div class="eventos-anteriores">
             <h2>EVENTOS ANTERIORES</h2>
+    
             <div class="item-evento-anterior">
-                {% for evento_anterior in eventos_anteriores %}
-                <h4>{{ evento_anterior.titulo }}</h4>
+                {% for evento_anterior in eventos_anteriores[:5] %}
+                <a href="{{ url_for('app_routes.publicaciones_pb.mostrar_publicaciones') }}">
+                    <h4>{{ evento_anterior.titulo }}</h4>
+                </a>
+                <span>{{ evento_anterior.fecha }}</span>
+                {% endfor %}
+            </div>
+        
+            <div class="item-evento-anterior">
+                {% for evento_anterior in eventos_anteriores[5:10] %}
+                <a href="{{ url_for('app_routes.publicaciones_pb.mostrar_publicaciones') }}">
+                    <h4>{{ evento_anterior.titulo }}</h4>
+                </a>
                 <span>{{ evento_anterior.fecha }}</span>
                 {% endfor %}
             </div>

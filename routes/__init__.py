@@ -13,6 +13,7 @@ from .formulario_inscripcion import formulario_inscripcion_bp
 from .administrador import administrador_bp
 from .solicitud_donacion import solicitud_donacion_bp
 from .solicitud_inscripcion import solicitud_inscripcion_bp
+from .publiciaciones import publicaciones_pb
 
 # Registra las rutas en el Blueprint
 app_routes.register_blueprint(index_bp)
@@ -25,3 +26,4 @@ app_routes.register_blueprint(formulario_inscripcion_bp)
 app_routes.register_blueprint(administrador_bp)
 app_routes.register_blueprint(solicitud_donacion_bp)
 app_routes.register_blueprint(solicitud_inscripcion_bp)
+app_routes.register_blueprint(publicaciones_pb)

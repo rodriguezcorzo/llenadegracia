@@ -18,7 +18,7 @@
       <div class="navigation">
         <div class="navigation-items">
           <a href="{{ url_for('app_routes.index_bp.mostrar_eventos') }}">Inicio</a>
-          <a href="{{ url_for('app_routes.mostrar_eventos_bp.mostrar_eventos') }}">Publicaciones</a>
+          <a href="{{ url_for('app_routes.publicaciones_pb.mostrar_publicaciones') }}">Publicaciones</a>
           <a href="{{ url_for('app_routes.formulario_donacion.formulario_donacion') }}">Donar</a>
           <a href="#">Contacto</a>
         </div>
@@ -71,6 +71,9 @@
     </section>
     <div class="contenido-evento">
       {% block contenido_eventos %}{% endblock %}
+    </div>
+    <div class="contenido-publicacion">
+      {% block contenido_publicaciones %}{% endblock %}
     </div>
     <script type="text/javascript" src="{{ url_for('static', filename='javascript/form_nuevo_evento.js') }}"></script>
     <script src="{{ url_for('static', filename='javascript/slider.js')}}"></script>

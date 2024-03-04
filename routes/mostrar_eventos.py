@@ -48,7 +48,7 @@ def mostrar_eventos():
     eventos_anteriores = session.query(
         Evento.titulo,
         Evento.fecha
-    ).filter(Evento.fecha < datetime.now()).order_by(Evento.fecha.desc()).all()
+    ).filter(Evento.fecha < datetime.now()).order_by(Evento.fecha.desc()).limit(10).all()
 
     # Comprobar si hay eventos próximos
     hay_eventos = len(eventos_proximos) > 0
